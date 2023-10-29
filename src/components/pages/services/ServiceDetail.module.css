@@ -1,0 +1,22 @@
+.serviceDetail {
+  position: relative;
+  padding-right: 2.5rem;
+  text-align: end;
+  cursor: pointer;
+  margin-top: 1.88rem;
+}
+
+.serviceDetail::after {
+  transition: all 0.3s;
+  content: url('data:image/svg+xml;utf8,<svg  viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4.1665 10H15.8332" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10 4.16675L15.8333 10.0001L10 15.8334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>');
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  right: 0;
+}
+
+.serviceDetail:hover::after {
+  transform: translateX(0) translateY(-50%);
+}

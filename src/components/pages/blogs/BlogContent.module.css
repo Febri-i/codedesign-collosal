@@ -1,0 +1,53 @@
+@tailwind components;
+.blogContentContainer blockquote::before {
+  content: "- " attr(cite);
+}
+@layer components {
+  @media (orientation: landscape) {
+    .blogContentContainer {
+      @apply [&>*]:mx-[5.5rem] mx-[5.5rem];
+    }
+    .blogContentContainer blockquote {
+      @apply px-20;
+    }
+  }
+
+  @media (orientation: portrait) {
+    .blogContentContainer {
+      @apply [&>*]:mx-4;
+    }
+  }
+
+  .blogContentContainer * {
+    @apply !text-white;
+  }
+
+  .blogContentContainer {
+    @apply [&_ol]:list-decimal [&_ul]:list-disc;
+  }
+
+  .blogContentContainer ul,
+  .blogContentContainer ol {
+    @apply list-inside pl-4;
+  }
+
+  .blogContentContainer p {
+    @apply text-lg;
+  }
+
+  .blogContentContainer li {
+    @apply text-lg;
+  }
+
+  .blogContentContainer img {
+    @apply !mx-0 my-14 w-full;
+  }
+
+  .blogContentContainer blockquote {
+    @apply relative my-12 text-lg;
+  }
+
+  .blogContentContainer blockquote::before {
+    @apply w-full text-center left-0 right-0 absolute top-full mt-5;
+  }
+}

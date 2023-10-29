@@ -1,0 +1,25 @@
+<svg 
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Group 55">
+              <path
+                id="Rectangle 184"
+                d="M18.9221 5.77922V3C18.9221 1.89543 18.0266 1 16.9221 1H3C1.89543 1 1 1.89543 1 3V16.9221C1 18.0266 1.89543 18.9221 3 18.9221H6.22727"
+                stroke="white"
+                stroke-width="2"
+              />
+              <rect
+                id="Rectangle 185"
+                x="7.078"
+                y="6.48053"
+                width="15.9221"
+                height="15.9221"
+                rx="1"
+                stroke="white"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+

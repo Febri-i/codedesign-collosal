@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hideScrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes flashingGradient {
+  0% {
+    background-position-x: 400%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
+
+@media (orientation: landscape) {
+  html {
+    font-size: 7px;
+  }
+
+  @screen sm {
+    html {
+      font-size: 8px;
+    }
+  }
+
+  @screen md {
+    html {
+      font-size: 9px;
+    }
+  }
+
+  @screen lg {
+    html {
+      font-size: 12px;
+    }
+  }
+
+  @screen xl {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  @screen 2xl {
+    html {
+      font-size: 18px;
+    }
+  }
+}
+
+@layer components {
+  img {
+    @apply relative rounded-md overflow-hidden;
+  }
+
+  label {
+    @apply flex flex-col w-full overflow-hidden gap-[0.31rem] text-[0.875rem];
+  }
+  form > div {
+    @apply flex gap-4;
+  }
+  form {
+    @apply p-9 flex gap-7 flex-col w-96 overflow-hidden  bg-gray-900 bg-opacity-50 rounded-md;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply bg-transparent border-[1px] rounded-md outline-none px-2 py-1 text-sm border-gray-600;
+  }
+
+  img::before {
+    content: "";
+    @apply absolute  inset-0 bg-gray-700;
+  }
+  button {
+    @apply relative z-30;
+  }
+  /* .glass, */
+  .btn-glass {
+    @apply hover:scale-110 scale-100 transition-all hover:delay-200 duration-300 shadow-xl;
+    overflow: hidden;
+    position: relative;
+  }
+  .glass:hover:after,
+  .btn-glass:hover:after {
+    @apply transition-all duration-1000;
+    background-position-x: -175%;
+  }
+  .glass::after,
+  .btn-glass::after {
+    @apply absolute inset-0 transition-none;
+    content: "";
+    background: linear-gradient(
+      -45deg,
+      transparent 0%,
+      transparent 47%,
+      rgba(255, 255, 255, 0.5) 47.5%,
+      rgba(255, 255, 255, 0.5) 52.5%,
+      transparent 52%,
+      transparent 100%
+    );
+    background-position-x: -25%;
+    background-size: 300%;
+  }
+  img::after {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.3) 48%,
+
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.3) 52%,
+
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    background-size: 200%;
+    animation-name: flashingGradient;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    @apply absolute inset-0;
+  }
+
+  .btn-white {
+    @apply bg-white hover:bg-accent-500 text-gray-900 transition-colors  duration-300 hover:text-white;
+  }
+
+  .btn-round {
+    @apply border-2 border-white;
+    border-radius: 999px !important;
+  }
+
+  .btn-sm {
+    @apply rounded-sm py-[.62rem] px-[1.88rem] text-sm;
+  }
+
+  .btn-md {
+    @apply rounded-sm py-[.62rem] px-[2.5rem];
+  }
+
+  .btn-lg {
+    @apply rounded-sm px-[3.44rem] whitespace-nowrap py-[.94rem] font-bold text-base;
+  }
+  .btn-primary {
+    @apply bg-accent-500;
+  }
+  .btn-glass {
+    @apply bg-[rgba(255,255,255,.1)] backdrop-blur-xl shadow-md relative;
+  }
+  .glass {
+    background-color: rgba(255, 255, 255, 0.04);
+    @apply backdrop-blur-0 shadow-md;
+  }
+  h4 {
+    @apply font-bold text-lg;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
+  hr {
+    @apply border-gray-700;
+  }
+  h2 {
+    @apply font-bold text-3xl landscape:leading-[3rem];
+  }
+  h1 {
+    @apply font-bold text-4xl;
+  }
+  h5 {
+    @apply text-semanticSecondary-500 font-bold landscape:leading-8;
+  }
+  h6 {
+    @apply font-bold;
+  }
+  p {
+    @apply landscape:leading-8 text-gray-200;
+  }
+  .link {
+    @apply text-accent-500 border-b-2 border-accent-500 font-bold;
+  }
+  .bgDecoration {
+    filter: blur(150px);
+    @apply aspect-square absolute -z-20 rounded-full;
+  }
+}

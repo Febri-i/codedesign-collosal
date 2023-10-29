@@ -1,0 +1,39 @@
+@tailwind components;
+
+@keyframes runningLogoItem {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logoContainer {
+  animation-timing-function: linear;
+  animation-fill-mode: forward;
+  animation-iteration-count: infinite;
+}
+
+@media (orientation: portrait) {
+  .logoContainer {
+    animation-name: runningLogoItem;
+    animation-duration: 10000ms;
+  }
+}
+
+.logoWrapper:hover .logoContainer {
+  animation-play-state: paused;
+}
+
+@layer components {
+  .logoWrapper {
+    @apply flex;
+  }
+  .logoContainer {
+    @apply flex landscape:border-y-[1px] portrait:!mx-0  py-10  border-gray-800 items-center landscape:justify-center landscape:w-full landscape:gap-14;
+  }
+  .logoItem {
+    @apply text-white text-opacity-60 cursor-pointer portrait:hover:text-red-600 portrait:hover:text-opacity-100 transition-colors  right-0 h-10 inline-block portrait:mr-14  portrait:shrink-0;
+  }
+}
