@@ -1,14 +1,8 @@
-import { For, Suspense, createEffect } from "solid-js";
-import {
-  ErrorBoundary,
-  createRouteData,
-  useParams,
-  useRouteData,
-} from "solid-start";
+import { For, createEffect } from "solid-js";
+import { createRouteData, useParams, useRouteData } from "solid-start";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import FeatureCard from "~/components/genericComponent/FeatureCard";
-import { GenericLoading } from "~/components/genericComponent/GenericLoading";
 import QuickFaq from "~/components/pages/faq/QuickFaq";
 import { fetchServiceInfoDetailed } from "~/lib/actions/service";
 
@@ -20,14 +14,16 @@ export function routeData() {
 
 export default function ServiceDetail() {
   const serviceInfo = useRouteData<typeof routeData>();
-
+  createEffect(() => {
+    console.log(serviceInfo());
+  });
   return (
     <>
       <CollosalTitle title={serviceInfo()?.name + " Service"} />
       <CenteredHeading
         hr
         heading="Solve your company's repetitive problems by designing apps"
-        title="DEVELOPMENT"
+        title={serviceInfo()?.name.toUpperCase() as string}
       />
       <div class="grid grid-cols-2 gap-16">
         <img
@@ -61,9 +57,11 @@ export default function ServiceDetail() {
           heading="Here's what you will get when purchasing this service"
         />
 
-        <div class="grid grid-cols-3 gap-5 mt-[5.62rem]">
+        <div class="grid [&>*]:h-full grid-cols-3 gap-5 mt-[5.62rem]">
           <For each={serviceInfo()?.illustratedFeatures}>
             {(feature) => {
+              console.log(feature);
+
               return (
                 <FeatureCard
                   detail={feature.description}

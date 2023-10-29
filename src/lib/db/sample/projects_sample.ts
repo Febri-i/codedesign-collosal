@@ -11,7 +11,7 @@ export const projects_sample: IProject[] = [
     title: "E-commerce Platform Redesign",
     review:
       "Collosal transformed our online presence, and our sales have surged. Amazing work!",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "Alice Johnson",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -25,7 +25,7 @@ export const projects_sample: IProject[] = [
     title: "Mobile App Development",
     review:
       "The app exceeded our expectations and has garnered excellent user reviews!",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "Daniel Smith",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -39,7 +39,7 @@ export const projects_sample: IProject[] = [
     title: "Data Analytics Dashboard",
     review:
       "Collosal's analytics platform has been instrumental in our data-driven strategy.",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "Emily Davis",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -53,7 +53,7 @@ export const projects_sample: IProject[] = [
     title: "Healthcare Management System",
     review:
       "Collosal's system has revolutionized our hospital's efficiency and patient care.",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "James Wilson",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -67,7 +67,7 @@ export const projects_sample: IProject[] = [
     title: "AI-Powered Chatbot",
     review:
       "The chatbot has reduced our support workload and increased customer satisfaction.",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "Olivia Brown",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -81,7 +81,7 @@ export const projects_sample: IProject[] = [
     title: "Inventory Management System",
     review:
       "Collosal's system has improved our inventory accuracy and reduced costs significantly.",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "Liam Lee",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -95,7 +95,7 @@ export const projects_sample: IProject[] = [
     title: "Online Learning Platform",
     review:
       "Collosal's platform has made online learning engaging and accessible for our students.",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "Sophia Evans",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -109,7 +109,7 @@ export const projects_sample: IProject[] = [
     title: "Blockchain-Based Supply Chain Tracking",
     review:
       "The blockchain solution has brought unprecedented transparency and trust to our supply chain.",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "William Miller",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -123,7 +123,7 @@ export const projects_sample: IProject[] = [
     title: "Social Media Marketing Automation",
     review:
       "Collosal's tool has revolutionized our social media marketing efforts and increased ROI.",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "Ava Martinez",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },
@@ -137,7 +137,7 @@ export const projects_sample: IProject[] = [
     title: "Smart Home Automation App",
     review:
       "Our customers love the user-friendly app developed by Collosal to control their smart homes.",
-    thumbnail: "",
+    thumbnail: "/samplePictures/project.jpg",
     personInCharge: "Mason White",
     pictureOfPersonInCharge: "https://thispersondoesnotexist.com/",
   },

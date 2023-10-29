@@ -5,15 +5,15 @@ export function createLoadMore<Type>(
   pageSize: number,
   fetchPage: (
     page: number,
-    size: number
-  ) => Promise<{ done: boolean; items: Type[] }>
+    size: number,
+  ) => Promise<{ done: boolean; items: Type[] }>,
 ): [
   Type[],
   Accessor<boolean>,
   Accessor<boolean>,
   () => void,
   () => void,
-  SetStoreFunction<Type[]>
+  SetStoreFunction<Type[]>,
 ] {
   const [itemtList, setItemList] = createStore<Type[]>([]);
   const [loading, setLoading] = createSignal<boolean>(false);

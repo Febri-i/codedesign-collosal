@@ -4,9 +4,9 @@ import {
   Show,
   createResource,
   createSignal,
+  createEffect,
 } from "solid-js";
 
-import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import GenericExplanation from "~/components/genericComponent/GenericExplanation";
 import { GenericLoading } from "~/components/genericComponent/GenericLoading";
@@ -26,9 +26,13 @@ export default function Project() {
       return await fetchProjectList(
         page,
         size,
-        technolgy() == "all" ? undefined : technolgy()
+        technolgy() == "all" ? undefined : technolgy(),
       );
     });
+  createEffect(() => {
+    resetProjectList();
+    loadMore();
+  });
   const [technologyList] = createResource<string[]>(fetchTechnologyList);
   return (
     <>
@@ -42,8 +46,8 @@ export default function Project() {
         <div class="flex items-center justify-end h-full">
           <select
             onchange={(e) => {
-              setTechnology((e.target as HTMLSelectElement).value);
               resetProjectList();
+              setTechnology((e.target as HTMLSelectElement).value);
               loadMore();
             }}
           >
