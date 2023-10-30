@@ -1,4 +1,4 @@
-import { For, createEffect } from "solid-js";
+import { ErrorBoundary, For, createEffect } from "solid-js";
 import { createRouteData, useParams, useRouteData } from "solid-start";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
@@ -25,55 +25,62 @@ export default function ServiceDetail() {
         heading="Solve your company's repetitive problems by designing apps"
         title={serviceInfo()?.name.toUpperCase() as string}
       />
-      <div class="grid grid-cols-2 gap-16">
-        <img
-          class="w-full h-full object-contain"
-          src={serviceInfo()?.illustration}
-        />
+      <ErrorBoundary
+        fallback={(e) => {
+          return <CenteredHeading err title="err" heading="aaaa" />;
+        }}
+      >
+        <div class="grid grid-cols-3 gap-16">
+          <img
+            class="w-full h-full object-contain"
+            src={serviceInfo()?.illustration}
+          />
 
+          <div>
+            {serviceInfo()
+              ?.description.split("\n")
+              .map((str) => (
+                <>
+                  <p>{str}</p>
+                  <br />
+                </>
+              ))}
+            <ul class="mt-11 list-disc list-inside">
+              <For each={serviceInfo()?.benefit}>
+                {(featureish) => (
+                  <li class="mt-3">
+                    <span>{featureish}</span>
+                  </li>
+                )}
+              </For>
+            </ul>
+          </div>
+        </div>
         <div>
-          {serviceInfo()
-            ?.description.split("\n")
-            .map((str) => (
-              <>
-                <p>{str}</p>
-                <br />
-              </>
-            ))}
-          <ul class="mt-10 list-disc list-inside">
-            <For each={serviceInfo()?.benefit}>
-              {(featureish) => (
-                <li class="mt-2">
-                  <span>{featureish}</span>
-                </li>
-              )}
+          <CenteredHeading
+            title="FEATURES"
+            heading="Here's what you will get when purchasing this service"
+          />
+
+          <div class="grid [&>*]:h-full grid-cols-4 gap-5 mt-[5.62rem]">
+            <For each={serviceInfo()?.illustratedFeatures}>
+              {(feature) => {
+                console.log(feature);
+
+                return (
+                  <FeatureCard
+                    detail={feature.description}
+                    title={feature.title}
+                    src={feature.illustration}
+                    flat
+                  ></FeatureCard>
+                );
+              }}
             </For>
-          </ul>
+          </div>
         </div>
-      </div>
-      <div>
-        <CenteredHeading
-          title="FEATURES"
-          heading="Here's what you will get when purchasing this service"
-        />
+      </ErrorBoundary>
 
-        <div class="grid [&>*]:h-full grid-cols-3 gap-5 mt-[5.62rem]">
-          <For each={serviceInfo()?.illustratedFeatures}>
-            {(feature) => {
-              console.log(feature);
-
-              return (
-                <FeatureCard
-                  detail={feature.description}
-                  title={feature.title}
-                  src={feature.illustration}
-                  flat
-                ></FeatureCard>
-              );
-            }}
-          </For>
-        </div>
-      </div>
       <QuickFaq section="General" />
     </>
   );

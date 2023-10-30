@@ -1,4 +1,8 @@
-import { createRouteData, useParams, useRouteData } from "solid-start";
+import ErrorBoundary, {
+  createRouteData,
+  useParams,
+  useRouteData,
+} from "solid-start";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import BlogContent, {
   IBlogContetProps,
@@ -15,8 +19,8 @@ import BlogCommentSection from "~/components/pages/blogs/BlogCommentSection";
 import { parseISOtoString, parseMilisecondToString } from "~/lib/utils";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import { _DBGetFAQs } from "~/lib/db/faq";
-import { ErrorBoundary, Suspense } from "solid-js";
 import { GenericLoading } from "~/components/genericComponent/GenericLoading";
+import { Suspense } from "solid-js";
 
 export function routeData() {
   const param = useParams<{ blog_id: string }>();

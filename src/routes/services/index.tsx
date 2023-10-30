@@ -32,7 +32,7 @@ export default function Service() {
               summaryDescription,
               summaryIllustratedFeatures,
             },
-            i
+            i,
           ) => {
             return (
               <ServiceSummaryTemplate
@@ -46,7 +46,7 @@ export default function Service() {
                 <ServiceFeatureSummary features={summaryIllustratedFeatures} />
               </ServiceSummaryTemplate>
             );
-          }
+          },
         )}
       </Suspense>
     </>

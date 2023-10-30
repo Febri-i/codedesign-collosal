@@ -1,6 +1,6 @@
 import { createMediaQuery } from "@solid-primitives/media";
-import { createEffect, ErrorBoundary, For, Suspense } from "solid-js";
-import { createRouteData, useRouteData } from "solid-start";
+import { createEffect, For, Suspense } from "solid-js";
+import ErrorBoundary, { createRouteData, useRouteData } from "solid-start";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import { GenericLoading } from "~/components/genericComponent/GenericLoading";

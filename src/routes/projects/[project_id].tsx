@@ -1,5 +1,9 @@
-import { ErrorBoundary, Show } from "solid-js";
-import { createRouteData, useParams, useRouteData } from "solid-start";
+import { Show } from "solid-js";
+import ErrorBoundary, {
+  createRouteData,
+  useParams,
+  useRouteData,
+} from "solid-start";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import ProjectDetail from "~/components/genericComponent/project/ProjectDetail";
 import ProjectSuggestion from "~/components/genericComponent/project/ProjectSuggestion";

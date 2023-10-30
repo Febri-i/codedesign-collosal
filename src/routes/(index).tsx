@@ -1,5 +1,5 @@
-import { createResource, ErrorBoundary, Suspense } from "solid-js";
-import { useRouteData } from "solid-start";
+import { createResource, Suspense } from "solid-js";
+import ErrorBoundary, { useRouteData } from "solid-start";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import { GenericLoading } from "~/components/genericComponent/GenericLoading";

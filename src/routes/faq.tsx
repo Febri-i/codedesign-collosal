@@ -1,12 +1,5 @@
-import {
-  For,
-  createEffect,
-  createSignal,
-  ErrorBoundary,
-  Suspense,
-  Show,
-} from "solid-js";
-import { createRouteData, useRouteData } from "solid-start";
+import { For, createEffect, createSignal, Suspense, Show } from "solid-js";
+import ErrorBoundary, { createRouteData, useRouteData } from "solid-start";
 import Accordin from "~/components/genericComponent/Accordin";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";

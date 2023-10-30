@@ -1,5 +1,5 @@
 import CenteredHeading from "../CenteredHeading";
-import { For, createResource, Suspense, ErrorBoundary } from "solid-js";
+import { For, createResource, Suspense } from "solid-js";
 import ProjectCard from "./ProjectCard";
 import {
   SummaryProjectInfo,
