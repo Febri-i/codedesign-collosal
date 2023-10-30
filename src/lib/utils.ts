@@ -15,7 +15,7 @@ export async function gqlCall(query: string) {
     method: "POST",
     body: queryFinale,
   });
-
+  console.log(response);
   if (!response.ok) return;
   const gqlResponse = await response.json();
   if (gqlResponse.errors) return;
