@@ -8,7 +8,12 @@ import { fetchServiceInfoDetailed } from "~/lib/actions/service";
 
 export function routeData() {
   const params = useParams<{ id: string }>();
-
+  let serviceId: string = "";
+  try {
+    serviceId = decodeURI(params.id);
+  } catch (error) {
+    throw new Error("Service not found.");
+  }
   return createRouteData(() => fetchServiceInfoDetailed(decodeURI(params.id)));
 }
 
