@@ -4,7 +4,7 @@ import ServiceFeatureSummary from "~/components/pages/services/ServiceFeatureSum
 import { fetchServiceSummaryInfoList } from "~/lib/actions/service";
 import { createRouteData, useRouteData } from "solid-start";
 import { GenericDecoration } from "~/components/genericComponent/GenericDecoration";
-import { Suspense } from "solid-js";
+import { For, Suspense } from "solid-js";
 import { GenericLoading } from "~/components/genericComponent/GenericLoading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 
@@ -17,14 +17,14 @@ export default function Service() {
   return (
     <>
       <CollosalTitle title="Services" />
+      <CenteredHeading
+        title="SERVICES"
+        heading="We are here to help solve your company's problems"
+        hr
+      />
       <Suspense fallback={<GenericLoading />}>
-        <CenteredHeading
-          title="SERVICES"
-          heading="We are here to help solve your company's problems"
-          hr
-        />
-        {serviceList()?.map(
-          (
+        <For each={serviceList()}>
+          {(
             {
               heading,
               illustration,
@@ -32,8 +32,9 @@ export default function Service() {
               summaryDescription,
               summaryIllustratedFeatures,
             },
-            i,
+            index,
           ) => {
+            const i = index();
             return (
               <ServiceSummaryTemplate
                 heading={heading}
@@ -46,8 +47,8 @@ export default function Service() {
                 <ServiceFeatureSummary features={summaryIllustratedFeatures} />
               </ServiceSummaryTemplate>
             );
-          },
-        )}
+          }}
+        </For>
       </Suspense>
     </>
   );

@@ -25,10 +25,10 @@ import { Suspense } from "solid-js";
 export function routeData() {
   const param = useParams<{ blog_id: string }>();
   const blogInfo = createRouteData<IActionBlogInfo>(() =>
-    fetchBlogInfo(param.blog_id)
+    fetchBlogInfo(param.blog_id),
   );
   const blogContent = createRouteData<IActionBlogContent>(() =>
-    fetchBlog(param.blog_id)
+    fetchBlog(param.blog_id),
   );
 
   return { blogInfo, blogContent };
@@ -76,8 +76,7 @@ export default function BlogPost() {
       }}
     >
       <Suspense fallback={<GenericLoading />}>
-        <CollosalTitle title={blogInfo()?.title as string} />
-
+        <CollosalTitle title={blogInfo()?.title as string} />,
         <div class="flex flex-col gap-20">
           <CenteredHeading
             title="BLOG"

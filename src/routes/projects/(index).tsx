@@ -1,11 +1,12 @@
 import {
-  ErrorBoundary,
   For,
   Show,
   createResource,
   createSignal,
   createEffect,
+  ErrorBoundary,
 } from "solid-js";
+import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import GenericExplanation from "~/components/genericComponent/GenericExplanation";

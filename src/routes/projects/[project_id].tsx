@@ -4,6 +4,7 @@ import ErrorBoundary, {
   useParams,
   useRouteData,
 } from "solid-start";
+import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import ProjectDetail from "~/components/genericComponent/project/ProjectDetail";
 import ProjectSuggestion from "~/components/genericComponent/project/ProjectSuggestion";
@@ -19,25 +20,34 @@ export default function ProjectDetailPage() {
   const projectInfo = useRouteData<typeof routeData>();
 
   return (
-    <>
-      <CollosalTitle title={projectInfo()?.title + " Project"} />
+    <ErrorBoundary
+      fallback={(e) => {
+        console.error(e);
+        return (
+          <CenteredHeading err title="ERROR" heading="Project not found." />
+        );
+      }}
+    >
+      <>
+        <CollosalTitle title={projectInfo()?.title + " Project"} />
 
-      <Show when={projectInfo() !== undefined}>
-        <ProjectDetail projectInfo={projectInfo()} />
-      </Show>
-      <hr />
-      <ErrorBoundary
-        fallback={(e, _) => {
-          console.error(e);
-          return <></>;
-        }}
-      >
-        <ProjectSuggestion
-          size={2}
-          title="PROJECTS"
-          heading="Other Amazing Projects"
-        />
-      </ErrorBoundary>
-    </>
+        <Show when={projectInfo() !== undefined}>
+          <ProjectDetail projectInfo={projectInfo()} />
+        </Show>
+        <hr />
+        <ErrorBoundary
+          fallback={(e, _) => {
+            console.error(e);
+            return <></>;
+          }}
+        >
+          <ProjectSuggestion
+            size={2}
+            title="PROJECTS"
+            heading="Other Amazing Projects"
+          />
+        </ErrorBoundary>
+      </>
+    </ErrorBoundary>
   );
 }
