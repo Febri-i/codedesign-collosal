@@ -1,4 +1,4 @@
-import ProjectSuggestion from "~/components/genericComponent/project/ProjectSuggestion";
+import ProjectSuggestion from "../project/ProjectSuggestion";
 
 export interface IHomeProjectProps {}
 

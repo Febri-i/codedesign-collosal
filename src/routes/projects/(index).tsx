@@ -4,14 +4,12 @@ import {
   createResource,
   createSignal,
   createEffect,
-  ErrorBoundary,
 } from "solid-js";
-import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import GenericExplanation from "~/components/genericComponent/GenericExplanation";
 import { GenericLoading } from "~/components/genericComponent/GenericLoading";
-import ProjectCard from "~/components/genericComponent/project/ProjectCard";
+import ProjectCard from "~/components/pages/project/ProjectCard";
 import {
   fetchProjectList,
   fetchTechnologyList,

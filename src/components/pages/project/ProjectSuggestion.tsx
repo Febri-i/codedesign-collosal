@@ -1,11 +1,11 @@
-import CenteredHeading from "../CenteredHeading";
 import { For, createResource, Suspense } from "solid-js";
 import ProjectCard from "./ProjectCard";
 import {
   SummaryProjectInfo,
   fetchRandomProjectSummaryInfo,
 } from "~/lib/actions/project";
-import { GenericLoading } from "../GenericLoading";
+import { GenericLoading } from "~/components/genericComponent/GenericLoading";
+import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 
 export interface IProjectSuggestionProps {
   size: number;
@@ -15,7 +15,7 @@ export interface IProjectSuggestionProps {
 
 export default function ProjectSuggestion(props: IProjectSuggestionProps) {
   const [projects] = createResource<SummaryProjectInfo[]>(() =>
-    fetchRandomProjectSummaryInfo(props.size)
+    fetchRandomProjectSummaryInfo(props.size),
   );
   return (
     <Suspense fallback={<GenericLoading />}>

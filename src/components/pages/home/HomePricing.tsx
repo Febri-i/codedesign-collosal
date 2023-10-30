@@ -1,7 +1,7 @@
 import { createMediaQuery } from "@solid-primitives/media";
 import { createEffect, For } from "solid-js";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
-import PricingCard from "~/components/genericComponent/project/PricingCard";
+import PricingCard from "~/components/pages/pricing/PricingCard";
 import { IPricing } from "~/lib/actions/service";
 
 export interface IHomePricingProps {

@@ -4,7 +4,7 @@ import ErrorBoundary, { createRouteData, useRouteData } from "solid-start";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import { GenericLoading } from "~/components/genericComponent/GenericLoading";
-import PricingCard from "~/components/genericComponent/project/PricingCard";
+import PricingCard from "~/components/pages/pricing/PricingCard";
 import QuickFaq from "~/components/pages/faq/QuickFaq";
 import { fetchPricingList } from "~/lib/actions/service";
 

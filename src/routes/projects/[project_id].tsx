@@ -6,8 +6,8 @@ import ErrorBoundary, {
 } from "solid-start";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
-import ProjectDetail from "~/components/genericComponent/project/ProjectDetail";
-import ProjectSuggestion from "~/components/genericComponent/project/ProjectSuggestion";
+import ProjectDetail from "~/components/pages/project/ProjectDetail";
+import ProjectSuggestion from "~/components/pages/project/ProjectSuggestion";
 import { fetchProjectInfo } from "~/lib/actions/project";
 
 export function routeData() {

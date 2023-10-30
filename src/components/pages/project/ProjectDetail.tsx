@@ -1,5 +1,5 @@
+import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import { ProjectInfo } from "~/lib/actions/project";
-import CenteredHeading from "../CenteredHeading";
 
 export interface IProjectDetailProps {
   projectInfo?: ProjectInfo;
