@@ -20,6 +20,7 @@ export default function Navbar() {
     { title: "Projects", url: "/projects" },
     { title: "Blogs", url: "/blogs" },
     { title: "Pricing", url: "/pricing" },
+    { title: "FAQ", url: "/faq" },
     { title: "About", url: "/about" },
   ];
   return (
@@ -34,7 +35,7 @@ export default function Navbar() {
         <NavbarSidebar links={links} />
       </Show>
       <Show when={isLandscape()}>
-        <div class="w-full flex justify-center gap-11 [&>p]:whitespace-nowrap text-gray-200">
+        <div class="w-full flex px-8 justify-between [&>p]:whitespace-nowrap text-gray-200">
           <For each={links}>
             {(link) => (
               <A href={link.url}>
