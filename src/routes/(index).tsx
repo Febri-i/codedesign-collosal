@@ -7,7 +7,7 @@ export default function Index() {
   return <GenericPage>
     <ErrorBoundary fallback={
       (e, _) => {
-        console.log(e)
+        console.error(e)
         return <CenteredHeading err title="ERROR" heading="Error occured." />
       }
     }>

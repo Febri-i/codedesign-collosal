@@ -13,7 +13,6 @@ export default function HomeTestimony(props: IHomeTestimonyProps) {
   return (
     <div
       class="flex flex-col landscape:gap-16 relative"
-      style={{ margin: "0 4.19rem" }}
     >
       <div class="h-[100vh] bg-accent-500 top-0 left-full bgDecoration "></div>
       <div class="h-[100vh] bg-semanticSecondary-500 bottom-o right-full bgDecoration "></div>

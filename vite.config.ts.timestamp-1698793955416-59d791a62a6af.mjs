@@ -1,0 +1,16 @@
+// vite.config.ts
+import solid from "file:///home/febri/Documents/projek/codedesign-master/node_modules/solid-start/vite/plugin.js";
+import { defineConfig } from "file:///home/febri/Documents/projek/codedesign-master/node_modules/vite/dist/node/index.js";
+import vercel from "file:///home/febri/Documents/projek/codedesign-master/node_modules/solid-start-vercel/index.js";
+var vite_config_default = defineConfig({
+  plugins: [
+    solid({
+      adapter: vercel(),
+      ssr: false
+    })
+  ]
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcudHMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCIvaG9tZS9mZWJyaS9Eb2N1bWVudHMvcHJvamVrL2NvZGVkZXNpZ24tbWFzdGVyXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ZpbGVuYW1lID0gXCIvaG9tZS9mZWJyaS9Eb2N1bWVudHMvcHJvamVrL2NvZGVkZXNpZ24tbWFzdGVyL3ZpdGUuY29uZmlnLnRzXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ltcG9ydF9tZXRhX3VybCA9IFwiZmlsZTovLy9ob21lL2ZlYnJpL0RvY3VtZW50cy9wcm9qZWsvY29kZWRlc2lnbi1tYXN0ZXIvdml0ZS5jb25maWcudHNcIjtpbXBvcnQgc29saWQgZnJvbSBcInNvbGlkLXN0YXJ0L3ZpdGVcIjtcblxuaW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSBcInZpdGVcIjtcbmltcG9ydCB2ZXJjZWwgZnJvbSBcInNvbGlkLXN0YXJ0LXZlcmNlbFwiO1xuZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHtcbiAgcGx1Z2luczogW1xuICAgIHNvbGlkKHtcbiAgICAgIGFkYXB0ZXI6IHZlcmNlbCgpLCBzc3I6IGZhbHNlXG4gICAgfSksXG4gIF0sXG59KTtcbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBNFQsT0FBTyxXQUFXO0FBRTlVLFNBQVMsb0JBQW9CO0FBQzdCLE9BQU8sWUFBWTtBQUNuQixJQUFPLHNCQUFRLGFBQWE7QUFBQSxFQUMxQixTQUFTO0FBQUEsSUFDUCxNQUFNO0FBQUEsTUFDSixTQUFTLE9BQU87QUFBQSxNQUFHLEtBQUs7QUFBQSxJQUMxQixDQUFDO0FBQUEsRUFDSDtBQUNGLENBQUM7IiwKICAibmFtZXMiOiBbXQp9Cg==
