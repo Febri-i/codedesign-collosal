@@ -1,5 +1,3 @@
-import { createMediaQuery } from "@solid-primitives/media";
-import { Show } from "solid-js";
 
 export interface ITestimonialCardProps {
   picture: string;

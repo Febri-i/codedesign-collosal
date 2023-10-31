@@ -1,4 +1,4 @@
-import { ErrorBoundary, For, Show } from "solid-js";
+import { For, Show } from "solid-js";
 import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import { GenericLoading } from "~/components/genericComponent/GenericLoading";

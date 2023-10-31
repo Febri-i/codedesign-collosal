@@ -47,9 +47,9 @@ export default function Footer() {
   };
 
   return (
-    <footer class="portrait:flex flex-col-reverse  landscape:grid grid-cols-4 pb-16">
-      <div class="portrait:flex justify-between flex-row-reverse">
-        <div class="flex items-center  gap-2 mb-2">
+    <footer class="grid grid-cols-4 pb-8 portrait:grid-cols-2">
+      <div >
+        <div class="flex items-center  gap-2 ">
           <SvgRenderer class="w-8" src="/logo/collosal2.svg" />
           <h3>Callosal.</h3>
         </div>
@@ -58,26 +58,24 @@ export default function Footer() {
           <p>Design By Collosal LLC</p>
         </div>
       </div>
-      <div class="grid grid-cols-3 col-span-3 portrait:mb-8">
-        <For each={[sectionServices, sectionCompany, sectionResources]}>
-          {(section) => {
-            return (
-              <div>
-                <span class="mb-2 text-sm font-bold">{section.title}</span>
-                <For each={section.details}>
-                  {(sectDetails) => {
-                    return (
-                      <A href={sectDetails.url}>
-                        <p>{sectDetails.name}</p>
-                      </A>
-                    );
-                  }}
-                </For>
-              </div>
-            );
-          }}
-        </For>
-      </div>
-    </footer>
+      <For each={[sectionServices, sectionCompany, sectionResources]}>
+        {(section) => {
+          return (
+            <div>
+              <span class="mb-2 text-sm font-bold">{section.title}</span>
+              <For each={section.details}>
+                {(sectDetails) => {
+                  return (
+                    <A href={sectDetails.url}>
+                      <p>{sectDetails.name}</p>
+                    </A>
+                  );
+                }}
+              </For>
+            </div>
+          );
+        }}
+      </For>
+    </footer >
   );
 }

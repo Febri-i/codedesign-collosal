@@ -1,4 +1,4 @@
-import { createEffect, createResource, createSignal } from "solid-js";
+import { createEffect, createSignal } from "solid-js";
 import { JSX } from "solid-js/web/types/jsx";
 
 type ISvgRendererProps = JSX.SvgSVGAttributes<SVGSVGElement> & {

@@ -32,16 +32,15 @@ export default function GenericPage(props: IGenericPageProps) {
                 </filter>\
               </defs>\
             </svg>#svgFilter')`;
-  extraFilter = "";
   return (
     <div class="bg-gray-900 relative">
       <div class="relative h-fit z-10  text-white ">
-        <div class="absolute inset-0 -z-10 ">
+        <div class="absolute inset-0 overflow-hidden -z-10 ">
           <div
             style={{
               "backdrop-filter": ` ${extraFilter} `,
             }}
-            class="absolute inset-0 z-10 bg-gray-900 bg-opacity-60"
+            class="absolute inset-0 z-10 bg-gray-900 bg-opacity-80"
           ></div>
           <MainDecoration />
         </div>
