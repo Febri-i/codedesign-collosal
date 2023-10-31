@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <CollosalTitle title="Contact" />
-      <div class="flex  portrait:items-center portrait:flex-col portrait:gap-5 landscape:gap-[6.88rem] justify-between">
+      <div class="flex  portrait:items-center portrait:flex-col gap-[6.88rem] justify-between">
         <div>
           <h5>Contact</h5>
           <h1>We love receiving messages from you, we are waiting for it.</h1>
@@ -22,36 +22,34 @@ export default function Contact() {
             />
           </div>
         </div>
-        <div>
-          <form class="shadow-md">
-            <div>
-              <label for="name">
-                <p>Name</p>
-                <input type="text" name="name" id="name" />
-              </label>
-              <label for="email">
-                <p>Email</p>
-                <input type="email" name="email" id="email" />
-              </label>
-            </div>
-            <label for="subject">
-              <p>Subject</p>
-              <input type="text" name="subject" id="subject" />
+        <form class="shadow-md w-full portrait:!p-0 portrait:bg-transparent">
+          <div>
+            <label for="name">
+              <p>Name</p>
+              <input type="text" name="name" id="name" />
             </label>
-            <label for="quote">
-              <p>Tell Us Your Problem</p>
-              <textarea
-                class="resize-none"
-                name="quote"
-                id="quote"
-                rows="5"
-              ></textarea>
+            <label for="email">
+              <p>Email</p>
+              <input type="email" name="email" id="email" />
             </label>
-            <button class="btn-lg btn-primary" type="submit">
-              Send Message
-            </button>
-          </form>
-        </div>
+          </div>
+          <label for="subject">
+            <p>Subject</p>
+            <input type="text" name="subject" id="subject" />
+          </label>
+          <label for="quote">
+            <p>Tell Us Your Problem</p>
+            <textarea
+              class="resize-none"
+              name="quote"
+              id="quote"
+              rows="5"
+            ></textarea>
+          </label>
+          <button class="btn-lg btn-primary" type="submit">
+            Send Message
+          </button>
+        </form>
       </div>
     </>
   );

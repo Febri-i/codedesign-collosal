@@ -1,6 +1,4 @@
-import { createMediaQuery } from "@solid-primitives/media";
 import SvgRenderer from "../svgRenderer";
-import { Show } from "solid-js";
 interface IFeatureCardProps {
   src: string;
   title: string;

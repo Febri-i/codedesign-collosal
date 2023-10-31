@@ -32,6 +32,7 @@ export default function GenericPage(props: IGenericPageProps) {
                 </filter>\
               </defs>\
             </svg>#svgFilter')`;
+  extraFilter = ""
   return (
     <div class="bg-gray-900 relative">
       <div class="relative h-fit z-10  text-white ">
