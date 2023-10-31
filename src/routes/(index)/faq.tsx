@@ -57,13 +57,13 @@ export default function Faq() {
             hr
           />
           <div class="landscape:grid portrait:flex flex-col  grid-cols-3 gap-5">
-            <div class="flex landscape:flex-col rounded-xl overflow-hidden  h-min  portrait:justify-between   ">
+            <div class="flex flex-col rounded-xl overflow-hidden  h-min  [&>*]:border-b-2 [&>*]:border-gray-600 last:[&>*]:border-b-0 ">
               <For each={faqSection()}>
                 {(faq, i) => {
                   const ourIndex = i();
                   return (
                     <span
-                      class="portrait:text-center landscape:px-10  py-4 bg-gray-800 cursor-pointer w-full"
+                      class="px-10 py-4 bg-gray-800 cursor-pointer w-full"
                       onclick={() => setCurrentIndex(ourIndex)}
                       classList={{
                         " text-white font-bold ": currentIndex() == ourIndex,

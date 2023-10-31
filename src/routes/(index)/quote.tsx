@@ -7,12 +7,12 @@ export default function Index() {
       <CollosalTitle title="Send A Qupte" />
       <GenericExplanation
         reverse
-        action={{ label: "Ask Us", cb: () => {} }}
+        action={{ label: "Ask Us", cb: () => { } }}
         title="SEND QUOTE"
         heading="Tell us about your problem and how we can help"
         detail="We are happy to help you, tell us what is the problem with your company, and we are ready to answer these problems. It usually takes a few minutes for us to respond."
       >
-        <form>
+        <form class="w-full">
           <div>
             <label for="name">
               <p>Name</p>
@@ -31,7 +31,7 @@ export default function Index() {
             <label for="companySize">
               <p>Company Size</p>
               <select name="companySize" id="companySize">
-                <option value="hheheh">XXXXL EXTREMELY LARGE</option>
+                <option value="hheheh">XXXL EXTREMELY LARGE</option>
               </select>
             </label>
           </div>
