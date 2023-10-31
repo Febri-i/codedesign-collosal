@@ -4,6 +4,7 @@ import CenteredHeading from "~/components/genericComponent/CenteredHeading";
 import CollosalTitle from "~/components/genericComponent/CollosalTitle";
 import FeatureCard from "~/components/genericComponent/FeatureCard";
 import QuickFaq from "~/components/pages/faq/QuickFaq";
+import { ServiceDetail } from "~/components/pages/services/ServiceDetail";
 import { fetchServiceInfoDetailed } from "~/lib/actions/service";
 
 export function routeData() {
@@ -17,7 +18,7 @@ export function routeData() {
   return createRouteData(() => fetchServiceInfoDetailed(serviceId));
 }
 
-export default function ServiceDetail() {
+export default function ServiceInfo() {
   const serviceInfo = useRouteData<typeof routeData>();
   return (
     <ErrorBoundary
@@ -34,39 +35,14 @@ export default function ServiceDetail() {
         heading="Solve your company's repetitive problems by designing apps"
         title={serviceInfo()?.name.toUpperCase() as string}
       />
-      <div class="grid grid-cols-3 gap-16">
-        <img
-          class="w-full h-full object-contain"
-          src={serviceInfo()?.illustration}
-        />
-
-        <div>
-          {serviceInfo()
-            ?.description.split("\n")
-            .map((str) => (
-              <>
-                <p>{str}</p>
-                <br />
-              </>
-            ))}
-          <ul class="mt-11 list-disc list-inside">
-            <For each={serviceInfo()?.benefit}>
-              {(featureish) => (
-                <li class="mt-3">
-                  <span>{featureish}</span>
-                </li>
-              )}
-            </For>
-          </ul>
-        </div>
-      </div>
+      <ServiceDetail benefit={serviceInfo()?.benefit as string[]} description={serviceInfo()?.description as string} illustration={serviceInfo()?.illustration as string} />
       <div>
         <CenteredHeading
           title="FEATURES"
           heading="Here's what you will get when purchasing this service"
         />
 
-        <div class="grid [&>*]:h-full grid-cols-4 gap-5 mt-[5.62rem]">
+        <div class="landscape:grid flex  flex-col  hideScroll snap-x snap-mandatory  [&>*]:h-full grid-cols-3 gap-5 mt-[5.62rem]">
           <For each={serviceInfo()?.illustratedFeatures}>
             {(feature) => {
               console.log(feature);
