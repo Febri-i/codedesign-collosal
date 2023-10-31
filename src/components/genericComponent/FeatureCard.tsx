@@ -1,4 +1,6 @@
+import { createMediaQuery } from "@solid-primitives/media";
 import SvgRenderer from "../svgRenderer";
+import { Show } from "solid-js";
 interface IFeatureCardProps {
   src: string;
   title: string;
@@ -8,7 +10,7 @@ interface IFeatureCardProps {
 
 function FeatureCard(props: IFeatureCardProps) {
   return (
-    <div class="glass w-full gap-[1.81rem] portrait:flex-start landscape:aspect-[82/69] px-10 pb-9 flex pt-8 landscape:flex-col ">
+    <div class="glass w-full gap-[1.81rem] portrait:flex-start landscape:aspect-[82/69] px-10 pb-9 flex pt-8 flex-col ">
       <div
         class={
           " w-fit h-fit  " +
