@@ -12,7 +12,6 @@ import {
   Title,
 } from "solid-start";
 import CenteredHeading from "./components/genericComponent/CenteredHeading";
-import GenericPage from "./components/genericComponent/GenericPage";
 import "./root.css";
 
 // TODO: CHANGE FONT TO NOTO SANS

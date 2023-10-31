@@ -11,7 +11,7 @@ export function getBlogUrl(blog_id: string) {
 export async function gqlCall(query: string) {
   const queryFinale = JSON.stringify({ query });
 
-  const response = await fetch("http://localhost:3000/graphql", {
+  const response = await fetch("/graphql", {
     method: "POST",
     body: queryFinale,
   });
