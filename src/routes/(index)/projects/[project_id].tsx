@@ -1,4 +1,3 @@
-import { Show } from "solid-js";
 import ErrorBoundary, {
   createRouteData,
   useParams,
