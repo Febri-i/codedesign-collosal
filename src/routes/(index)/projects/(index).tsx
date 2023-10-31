@@ -65,7 +65,8 @@ export default function Project() {
       </GenericExplanation>
       <hr />
       <div class="flex flex-col gap-20 justify-center">
-        <div class="grid grid-cols-2 gap-x-5 gap-y-16">
+
+        <div class="landscape:grid portrait:flex flex-col grid-cols-2 gap-x-5 gap-y-16">
           <For each={projectList}>
             {(projectinfo) => <ProjectCard {...projectinfo} />}
           </For>
