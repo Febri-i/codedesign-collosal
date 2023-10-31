@@ -28,26 +28,22 @@ export default function ProjectDetailPage() {
         );
       }}
     >
-      <>
-        <CollosalTitle title={projectInfo()?.title + " Project"} />
+      <CollosalTitle title={projectInfo()?.title + " Project"} />
 
-        <Show when={projectInfo() !== undefined}>
-          <ProjectDetail projectInfo={projectInfo()} />
-        </Show>
-        <hr />
-        <ErrorBoundary
-          fallback={(e, _) => {
-            console.error(e);
-            return <></>;
-          }}
-        >
-          <ProjectSuggestion
-            size={2}
-            title="PROJECTS"
-            heading="Other Amazing Projects"
-          />
-        </ErrorBoundary>
-      </>
+      <ProjectDetail projectInfo={projectInfo()} />
+      <hr />
+      <ErrorBoundary
+        fallback={(e, _) => {
+          console.error(e);
+          return <></>;
+        }}
+      >
+        <ProjectSuggestion
+          size={2}
+          title="PROJECTS"
+          heading="Other Amazing Projects"
+        />
+      </ErrorBoundary>
     </ErrorBoundary>
   );
 }

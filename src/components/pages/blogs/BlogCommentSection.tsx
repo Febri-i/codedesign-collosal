@@ -15,7 +15,7 @@ export interface IBlogCommentSectionProps {
 export default function BlogCommentSection(props: IBlogCommentSectionProps) {
   const [commentList, isLoading, isDone, gatherComment, _, setCommentList] =
     createLoadMore(4, (page: number, size: number) =>
-      fetchCommentList(props.blog_id, page, size)
+      fetchCommentList(props.blog_id, page, size),
     );
 
   const [postingComment, setPostingComment] = createSignal<boolean>(false);
@@ -30,7 +30,7 @@ export default function BlogCommentSection(props: IBlogCommentSectionProps) {
       props.blog_id,
       email(),
       username(),
-      comment()
+      comment(),
     );
     if (result) {
       setCommentList((val) => [result, ...val]);

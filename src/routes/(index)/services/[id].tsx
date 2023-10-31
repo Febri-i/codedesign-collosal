@@ -14,7 +14,7 @@ export function routeData() {
   } catch (error) {
     throw new Error("Service not found.");
   }
-  return createRouteData(() => fetchServiceInfoDetailed(decodeURI(params.id)));
+  return createRouteData(() => fetchServiceInfoDetailed(serviceId));
 }
 
 export default function ServiceDetail() {

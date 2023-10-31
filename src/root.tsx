@@ -1,4 +1,3 @@
-// @refresh reload
 import { Link } from "@solidjs/router";
 import { Suspense } from "solid-js";
 import {
@@ -27,27 +26,25 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body>
-        <GenericPage>
-          <ErrorBoundary
-            fallback={(err, _) => {
-              console.error(err);
-              return (
-                <CenteredHeading
-                  title="ERROR"
-                  heading={err}
-                  err
-                ></CenteredHeading>
-              );
-            }}
-          >
-            <Suspense>
-              <Routes>
-                <FileRoutes />
-              </Routes>
-            </Suspense>
-          </ErrorBoundary>
-          <Scripts />
-        </GenericPage>
+        <ErrorBoundary
+          fallback={(err, _) => {
+            console.error(err);
+            return (
+              <CenteredHeading
+                title="ERROR"
+                heading={err}
+                err
+              ></CenteredHeading>
+            );
+          }}
+        >
+          <Suspense>
+            <Routes>
+              <FileRoutes />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
+        <Scripts />
       </Body>
     </Html>
   );
