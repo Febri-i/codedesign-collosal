@@ -15,7 +15,7 @@ SolidStart implementation of [codedesign-collosal](https://codedesign.dev/challe
 
 There are things that can be improved but i decided to stop for now, because i have some other things to do.
 
-- [ ] Better error handling
+- [x] Better error handling
 - [ ] Use real database
 
 # Credit
