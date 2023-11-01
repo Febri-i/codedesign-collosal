@@ -5,13 +5,13 @@ import { BlogSocialIcon } from "./BlogSocialIcon";
 
 export default function BlogAuthorCard(props: IAuthor) {
   return (
-    <div class="flex portrait:flex-col w-full shadow-md rounded-md bg-white items-start bg-opacity-5 landscape:gap-12 p-10">
+    <div class="flex portrait:flex-col w-full shadow-md rounded-md bg-white items-start bg-opacity-5 landscape:gap-12 portrait:gap-5 p-10">
       <img
         class="landscape:w-24 portrait:w-16 aspect-square shrink-0 object-cover block rounded-full"
         src={props.picture}
         alt={props.name + "'s picture"}
       />
-      <div>
+      <div class="w-full">
         <div class="flex justify-between items-center">
           <div class="flex flex-col justify-center">
             <h4>{props.name}</h4>
