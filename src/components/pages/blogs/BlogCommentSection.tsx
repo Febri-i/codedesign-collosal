@@ -1,4 +1,4 @@
-import { For, Show, batch, createSignal, ErrorBoundary } from "solid-js";
+import { For, Show, createSignal } from "solid-js";
 import {
   IActionComment,
   fetchCommentList,
@@ -97,7 +97,7 @@ export default function BlogCommentSection(props: IBlogCommentSectionProps) {
         </div>
         <Show when={!isDone()}>
           <Show when={!isLoading()} fallback={<GenericLoading />}>
-            <button class="btn-lg mt-16 btn-glass mx-auto block ">
+            <button onclick={gatherComment} class="btn-lg mt-16 btn-glass mx-auto block ">
               Load More
             </button>
           </Show>
