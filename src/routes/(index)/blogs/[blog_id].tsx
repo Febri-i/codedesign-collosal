@@ -47,7 +47,7 @@ export default function BlogPost() {
       }}
     >
       <Suspense fallback={<GenericLoading />}>
-        <CollosalTitle title={blogInfo()?.title as string} />,
+        <CollosalTitle title={blogInfo()?.title as string} />
         <div class="flex flex-col gap-20">
           <CenteredHeading
             title="BLOG"
