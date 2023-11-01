@@ -51,7 +51,7 @@ export default function Footer() {
       <div >
         <div class="flex items-center  gap-2 ">
           <SvgRenderer class="w-8" src="/logo/collosal2.svg" />
-          <h3>Callosal.</h3>
+          <h3>Collosal.</h3>
         </div>
         <div>
           <p>Copyright © 2021</p>
