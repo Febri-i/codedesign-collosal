@@ -39,7 +39,7 @@ export function NavbarSidebar(props: INavbarSideBarProps) {
               onclick={() => setShowSideBar(false)}
             />
           </div>
-          <div class="flex h-full flex-col">
+          <div class="flex h-full gap-4 flex-col">
             <For each={props.links}>
               {(link) => (
                 <A href={link.url}>
@@ -48,9 +48,6 @@ export function NavbarSidebar(props: INavbarSideBarProps) {
               )}
             </For>
           </div>
-          <A href="/contact">
-            <button class="btn-sm btn-white">Contacts</button>
-          </A>
         </div>
       </div>
     </>

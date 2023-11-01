@@ -32,7 +32,7 @@ export default function Navbar() {
         </div>
       </A>
       <Show when={!isLandscape()}>
-        <NavbarSidebar links={links} />
+        <NavbarSidebar links={[...links, { title: "Contacts", url: "/contact" }]} />
       </Show>
       <Show when={isLandscape()}>
         <div class="w-full flex px-8 justify-between [&>p]:whitespace-nowrap text-gray-200">
