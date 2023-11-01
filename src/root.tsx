@@ -14,7 +14,6 @@ import {
 import CenteredHeading from "./components/genericComponent/CenteredHeading";
 import "./root.css";
 
-// TODO: CHANGE FONT TO NOTO SANS
 export default function Root() {
   return (
     <Html lang="en">
@@ -22,7 +21,6 @@ export default function Root() {
         <Link rel="icon" href="/favicon.svg"></Link>
         <Title>Collosal</Title>
         <Meta charset="utf-8" />
-        <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body>
         <ErrorBoundary
