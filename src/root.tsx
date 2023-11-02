@@ -20,6 +20,8 @@ export default function Root() {
       <Head>
         <Link rel="icon" href="/favicon.svg"></Link>
         <Title>Collosal</Title>
+        <Meta name="og:image" content="https://raw.githubusercontent.com/Febri-i/codedesign-collosal/main/thumbnail.png" />
+        <Meta name="description" content="This is a fictional company" />
         <Meta charset="utf-8" />
       </Head>
       <Body>
